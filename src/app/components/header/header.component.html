@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>QRCode Generator</span>
+  <span class="spacer"></span>
+  <button mat-icon-button matTooltip="Visit github repository">
+    <mat-icon>code</mat-icon>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openDialog()">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+    <button mat-menu-item (click)="navigate('https://arpha01.github.io/donation')">
+      <mat-icon>local_cafe</mat-icon>
+      <span>Donate</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="navigate('https://arpha01.github.io/projects/qrcode')">
+      <mat-icon>file_download</mat-icon>
+      <span>Get desktop version</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

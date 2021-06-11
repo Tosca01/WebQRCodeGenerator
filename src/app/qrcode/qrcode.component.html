@@ -1,0 +1,37 @@
+<div class="container">
+  <mat-card>
+    <div class="side-1">
+      <p class="mat-body text-muted">Preview</p>
+      <qr-code [value]="qrcodeText" errorCorrectionLevel="M" [centerImageSrc]="useImage ? imageUrl : ''"
+        [size]="qrcodeSize" #canvas></qr-code>
+    </div>
+    <div class="side-2">
+      <p class="mat-body-strong">QR Settings</p>
+      <mat-checkbox [(ngModel)]="useImage" color="primary" class="m-t-1" (change)="checkboxChanged($event)">Use Image
+      </mat-checkbox>
+      <form [formGroup]="imageForm">
+        <p class="mat-body text-muted m-t-1 m-b-0">Add an image or logo</p>
+        <mat-form-field appearance="standard" class="img-text-field">
+          <mat-label>Image URL</mat-label>
+          <input matInput formControlName="imageTextField" [readonly]="!useImage" (keyup)="urlChange($event)"
+            #urlOfImage>
+          <mat-error
+            *ngIf="imageForm.get('imageTextField').touched && imageForm.get('imageTextField').hasError('required') && useImage">
+            Url required
+          </mat-error>
+        </mat-form-field>
+      </form>
+      <p>QRCode image size</p>
+      <mat-form-field appearance="standard" class="size-box">
+        <mat-label>Size</mat-label>
+        <input matInput [(ngModel)]="qrcodeSize">
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Data text</mat-label>
+      <textarea matInput [(ngModel)]="qrcodeText"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="w-100" style="height:2.5rem;" (click)="saveQrcode()">Save</button>
+  </mat-card>
+ 
+</div>
