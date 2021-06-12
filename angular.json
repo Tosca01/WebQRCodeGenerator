@@ -25,11 +25,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              {
-                "glob": "src/_redirects",
-                "input": "src",
-                "output": "/"
-              }
+              "src/_redirects"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
