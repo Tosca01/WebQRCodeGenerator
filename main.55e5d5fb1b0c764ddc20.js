@@ -521,7 +521,7 @@ AppRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar color=\"primary\">\n  <span>QRCode Generator</span>\n  <span class=\"spacer\"></span>\n  <button mat-icon-button matTooltip=\"Visit github repository\">\n    <mat-icon>code</mat-icon>\n  </button>\n  <button mat-icon-button [matMenuTriggerFor]=\"menu\">\n    <mat-icon>more_vert</mat-icon>\n  </button>\n  <mat-menu #menu=\"matMenu\">\n    <button mat-menu-item (click)=\"openDialog()\">\n      <mat-icon>info</mat-icon>\n      <span>About</span>\n    </button>\n    <button mat-menu-item (click)=\"navigate('https://arpha01.github.io/donation')\">\n      <mat-icon>local_cafe</mat-icon>\n      <span>Donate</span>\n    </button>\n    <mat-divider></mat-divider>\n    <button mat-menu-item (click)=\"navigate('https://arpha01.github.io/projects/qrcode')\">\n      <mat-icon>file_download</mat-icon>\n      <span>Get desktop version</span>\n    </button>\n  </mat-menu>\n</mat-toolbar>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-toolbar color=\"primary\">\n  <span>QRCode Generator</span>\n  <span class=\"spacer\"></span>\n  <button mat-icon-button matTooltip=\"Visit github repository\" (click)=\"navigate('https://github.com/Arpha01/WebQRCodeGenerator')\">\n    <mat-icon>code</mat-icon>\n  </button>\n  <button mat-icon-button [matMenuTriggerFor]=\"menu\">\n    <mat-icon>more_vert</mat-icon>\n  </button>\n  <mat-menu #menu=\"matMenu\">\n    <button mat-menu-item (click)=\"openDialog()\">\n      <mat-icon>info</mat-icon>\n      <span>About</span>\n    </button>\n    <button mat-menu-item (click)=\"navigate('https://arpha01.github.io/donation')\">\n      <mat-icon>local_cafe</mat-icon>\n      <span>Donate</span>\n    </button>\n    <mat-divider></mat-divider>\n    <button mat-menu-item (click)=\"navigate('https://arpha01.github.io/projects/qrcode')\">\n      <mat-icon>file_download</mat-icon>\n      <span>Get desktop version</span>\n    </button>\n  </mat-menu>\n</mat-toolbar>\n");
 
 /***/ }),
 
@@ -575,4 +575,4 @@ webpackEmptyAsyncContext.id = "zn8P";
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main.ea386f2aa66513021535.js.map
+//# sourceMappingURL=main.55e5d5fb1b0c764ddc20.js.map
